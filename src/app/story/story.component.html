@@ -1,0 +1,33 @@
+<!-- <div class="container mt-5"> -->
+  <!-- <p>{{ CurrentScene.text }}</p> -->
+  <!-- <div *ngFor="let option of CurrentScene.choices"> -->
+    <!-- <app-option [choice]="option" (click)="makeChoice(option)"></app-option> <!-- property bindinggg -->
+  <!-- </div> -->
+<!-- </div> -->
+<div class="main h-100 w-100">
+<div class="game-container container mt-5">
+  <!-- Game Title -->
+  <div class="game-title fade-in">
+    <h1>Make your own story</h1>
+  </div>
+
+  <!-- Display the current scene's text -->
+  <div class="scene-text fade-in">
+    <p>{{ CurrentScene.text }}</p>
+  </div>
+
+  <!-- Display choices as interactive options -->
+  <div class="choices">
+    <button
+      *ngFor="let option of CurrentScene.choices"
+      class="choice-button slide-in"
+      (click)="makeChoice(option)"
+    >
+      {{ option.text }}
+    </button>
+  </div>
+</div>
+</div>
+
+
+

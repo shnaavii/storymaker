@@ -1,0 +1,100 @@
+/* Add a background image to the entire page */
+.main {
+  background: url('https://i.pinimg.com/736x/92/18/8a/92188ae06225f7cfeaa8aa675d08b494.jpg') no-repeat center center fixed; /* Replace with your game image URL */
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+/* Styling for the game container */
+.game-container {
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent black for contrast */
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Styling for the game title */
+.game-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #ffeaa7;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+  animation: fade-in 1.2s ease-in-out forwards;
+}
+
+/* Scene text styling */
+.scene-text p {
+  font-size: 1.5rem;
+  color: #dfe6e9;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  animation: fade-in 1.5s ease-in-out forwards;
+}
+
+/* Choices container */
+.choices {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Choice buttons with gradient */
+.choice-button {
+  font-size: 1.2rem;
+  padding: 15px 25px;
+  background: linear-gradient(90deg, #6c5ce7, #00cec9);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+  animation: slide-in 0.5s ease-in-out forwards;
+}
+
+.choice-button:hover {
+  background: linear-gradient(90deg, #00cec9, #74b9ff);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.choice-button:active {
+  transform: translateY(0);
+  background: linear-gradient(90deg, #636e72, #b2bec3);
+  box-shadow: none;
+}
+
+/* Animations */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
